@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageProduct from "../PageProduct/PageProduct";
 import DetailProduct from "../DetailProduct/DetailProduct";
 import Side from "../Side/Side";
+import About from "../About/About";
 
 const filterContexte = React.createContext();
 
@@ -21,9 +22,10 @@ function App() {
                     <Routes>
                         <Route path="/products" element={<PageProduct />} />
                         <Route
-                            path="/detailproduct"
+                            path="/detailproduct/:id"
                             element={<DetailProduct />}
                         />
+                        <Route path="/about" element={<About />} />
                     </Routes>
                 </Router>
                 <Footer />
